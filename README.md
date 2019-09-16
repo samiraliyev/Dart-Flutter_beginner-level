@@ -203,3 +203,49 @@ class Animals{
 class Pet extends Animals{
   String name;
 }
+
+
+                                                  ********* Overriting method **********
+
+Overriting methodlar ucun yuxardaki kodu yeniden yazib neceki, bir classda olmayan variableleri extends olmus classdan cekdiyimiz kimi o classa tanitmadigim, lakin, diger klassdan cekdiyim methodlari gosterecem.
+Animal classinda method yazdim. Ve hemin methodu extends olunmus Pet classinda cagirdim. Ve overriting olarag super yazdim ki, yeni method cagirilarken get birinci parent classin icindekini oxu sora child classa gel.
+
+main(){
+ 
+  var cat = Pet();
+  cat.name = "MM";
+  cat.happyBirthday();
+}
+
+class Animal{
+  int age;
+  
+   void happyBirthday(){
+    print("Happy bithday");
+  }
+}
+
+class Pet extends Animal{
+  String name;
+ 
+ void happyBirthday(){
+    super.happyBirthday();
+    print(name);
+ }
+}
+
+
+                                                ********* Maps **********
+Map list-e oxsuyur. Yazilisinda biraz ferg var. Map<> anyMap = {} kimi yazilir . Burada <> arasinda iki deyer yazilir key ve value, birincisi String, ikincisi ise String, int ve dynamic ola biler. Eger Map-in daxilindaki verilenler her iki terefi string olarda <> arasinda String, String yazilir. Eger key String value qarisig olacagsa, onda <String, dynamic> kimi yazilir.
+
+void main(){
+ 
+ Map<String, int> persons = {
+   
+   "Samir": 27,
+   "Leman": 27,
+   "Tim": 33
+ };
+  
+  print(person["Leman"]);
+}
